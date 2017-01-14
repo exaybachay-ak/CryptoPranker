@@ -24,7 +24,9 @@ $dynasm = Add-Type -MemberDefinition @'
 
 [Int32[]]$elements = 1 #COLOR_DESKTOP
 [Int32[]]$values = [Drawing.ColorTranslator]::ToWin32(
-  [Drawing.Color]::Black #Required color
+#  [Drawing.Color]::Black #Required color
+#  Red seems more convincing so I changed it from black to red
+  [Drawing.Color]::Red #Required color
 )
 
 $dynasm::SetSysColors($elements.Length, $elements, $values)
